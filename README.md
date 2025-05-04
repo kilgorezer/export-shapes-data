@@ -1,7 +1,7 @@
 # export-shapes-data
 With everything that is going on, you may want to export your data from Shapes. The items in this repository allows you to do this.\
 \
-This uses only reverse-engineered Shapes frontend API requests and may include some account information, but likely nothing sensitive beyond identification (ranging in sensitivity from account ID to name).\
+This uses only reverse-engineered Shapes frontend API requests and may include some account information, but likely nothing sensitive beyond identification (ranging in sensitivity from account ID to account owner's name).\
 To activate the userscript if it is installed, go to https://shapes.inc/export/data \
 The data is in JSON, but you may need a code prettifier to make it human-readable, and the data can get very large if you have enough shapes you created and/or recently used.\
 \
