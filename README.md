@@ -5,6 +5,7 @@ This uses only reverse-engineered Shapes frontend API requests and may include s
 To activate the userscript if it is installed, go to https://shapes.inc/export/data \
 The data is in JSON, but you may need a code prettifier to make it human-readable, and the data can get very large if you have enough shapes you created and/or recently used.\
 \
+\
 Exported Data:\
 \
 Recent Shapes: Public Settings, Last 2048 user memories, User-Specific Settings as `shapes` \
