@@ -9,18 +9,26 @@ async function export_data(username) {
 	return data;
 }
 async function export_my_shapes() {
-	var data = {};
-	(await (await fetch("https://shapes.inc/api/shapes?category=self")).json()).forEach(async ({username})=>{ // For each self-made shape,
-		data[username] = JSON.parse(JSON.stringify(await export_data(username))); // Export data.
-	});
-	return data;
+        const recentShapes = await (await fetch("https://shapes.inc/api/shapes?category=self")).json();
+                const promises = recentShapes.map(async ({ username }) => {
+                const userData = await export_data(username);
+                return [username, userData]; // Return a key-value pair
+        });
+
+        const results = await Promise.all(promises);
+        const data = Object.fromEntries(results); // Convert the array of key-value pairs back to an object
+        return data;
 }
 async function export_recent_shapes() {
-	var data = {};
-	(await (await fetch("https://shapes.inc/api/shapes?category=recent")).json()).forEach(async ({username})=>{ // For each recent shape,
-		data[username] = JSON.parse(JSON.stringify(await export_data(username))); // Export data.
-	});
-	return data;
+        const recentShapes = await (await fetch("https://shapes.inc/api/shapes?category=recent")).json();
+                const promises = recentShapes.map(async ({ username }) => {
+                const userData = await export_data(username);
+                return [username, userData]; // Return a key-value pair
+        });
+
+        const results = await Promise.all(promises);
+        const data = Object.fromEntries(results); // Convert the array of key-value pairs back to an object
+        return data;
 }
 async function export_all_data() {
 	var data = {}
