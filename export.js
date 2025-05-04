@@ -10,8 +10,23 @@ async function export_data(username) {
 }
 async function export_my_shapes() {
 	var data = {};
-	(await (await fetch("https://shapes.inc/api/shapes?category=self")).json()).forEach(async ({username})=>{
-		data[username] = await export_data(username);
+	(await (await fetch("https://shapes.inc/api/shapes?category=self")).json()).forEach(async ({username})=>{ // For each self-made shape,
+		data[username] = await export_data(username); // Export data.
 	});
+	return data;
+}
+async function export_recent_shapes() {
+	var data = {};
+	(await (await fetch("https://shapes.inc/api/shapes?category=recent")).json()).forEach(async ({username})=>{ // For each recent shape,
+		data[username] = await export_data(username); // Export data.
+	});
+	return data;
+}
+async function export_all_data() {
+	var data = {}
+	data.shapes = await export_my_shapes(); // Export your shapes
+	data.recent = await export_recent_shapes(); // Export recent shapes
+	data.user = await (await fetch("https://shapes.inc/api/users")).json(); // Export user info
+	data.info = await (await fetch("https://shapes.inc/api/auth/me")).json(); // Export auth data
 	return data;
 }
