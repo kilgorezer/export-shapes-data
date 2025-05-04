@@ -11,5 +11,5 @@ Exported Data:\
 Recent Shapes: Public Settings, Last 2048 user memories, User-Specific Settings as `shapes` \
 Your Shapes: Settings, Last 2048 user memories, Knowledge, Training, User-Specific Settings as `recent` \
 \
-User Information as `user` \
+User Information as `user` excluding Discord auth information. \
 User Authentication Information as `info`
