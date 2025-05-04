@@ -15,4 +15,5 @@ User Information as `user` excluding Discord server list and Discord auth inform
 User Authentication Information as `info` \
 \
 \
-Make sure you are logged in before you begin the export.
+Make sure you are logged in before you begin the export. \
+These scripts are not responsible for what happens to your data after it is exported.
