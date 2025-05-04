@@ -40,6 +40,7 @@
 		data.recent = await export_recent_shapes();
 		data.user = await (await fetch("https://shapes.inc/api/users")).json();
 		data.info = await (await fetch("https://shapes.inc/api/auth/me")).json();
+		return data;
 	}
 	var a = document.createElement('a');
 	a.href = URL.createObjectURL(new Blob([JSON.stringify(export_all_data())], { type: 'application/json' }));
