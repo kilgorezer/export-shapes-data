@@ -16,4 +16,6 @@ User Authentication Information as `info` \
 \
 \
 Make sure you are logged in before you begin the export. \
-These scripts are not responsible for what happens to your data after it is exported.
+These scripts are not responsible for what happens to your data after it is exported. \
+\
+Despite memories being included, chat history is not included in the export. Only your own shapes and recently used shapes have their data exported.
