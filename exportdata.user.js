@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Export Shapes Data
 // @namespace    https://shapes.inc/export/data
-// @version      1.1
+// @version      1.2
 // @description  Exports your Shapes configuration data and memories.
 // @author       kilgorezer
 // @match        https://shapes.inc/export/data
@@ -47,6 +47,8 @@ async function export_all_data() {
 	data.shapes = await export_my_shapes(); // Export your shapes
 	data.recent = await export_recent_shapes(); // Export recent shapes
 	data.user = await (await fetch("https://shapes.inc/api/users")).json(); // Export user info
+	data.user.discord_info = {};
+	data.user.discord_user = {};
 	data.info = await (await fetch("https://shapes.inc/api/auth/me")).json(); // Export auth data
 	return data;
 }
