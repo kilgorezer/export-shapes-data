@@ -8,8 +8,8 @@ The data is in JSON, but you may need a code prettifier to make it human-readabl
 \
 Exported Data:\
 \
-Recent Shapes: Public Settings, Last 2048 user memories, User-Specific Settings as `shapes` \
-Your Shapes: Settings, Last 2048 user memories, Knowledge, Training, User-Specific Settings as `recent` \
+Recent Shapes: Public Settings, Last 2048 user memories, User-Specific Settings as `recent` \
+Your Shapes: Settings, Last 2048 user memories, Knowledge, Training, User-Specific Settings as `shapes` \
 \
 User Information as `user` excluding Discord server list and Discord auth information. \
 User Authentication Information as `info` \
