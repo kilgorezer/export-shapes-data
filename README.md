@@ -1,5 +1,5 @@
 # export-shapes-data
-With everything that is going on, you may want to export your shapes data. The items in this repo allows you to.\
+With everything that is going on, you may want to export your data from Shapes. The items in this repository allows you to do this.\
 \
 This uses only reverse-engineered Shapes frontend API requests and may include some account information, but likely nothing sensitive beyond email and google auth.\
 To activate the userscript if it is installed, go to https://shapes.inc/export/data \
