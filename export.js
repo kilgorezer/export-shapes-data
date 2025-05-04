@@ -11,14 +11,14 @@ async function export_data(username) {
 async function export_my_shapes() {
 	var data = {};
 	(await (await fetch("https://shapes.inc/api/shapes?category=self")).json()).forEach(async ({username})=>{ // For each self-made shape,
-		data[username] = await JSON.parse(JSON.stringify(await export_data(username))); // Export data.
+		data[username] = JSON.parse(JSON.stringify(await export_data(username))); // Export data.
 	});
 	return data;
 }
 async function export_recent_shapes() {
 	var data = {};
 	(await (await fetch("https://shapes.inc/api/shapes?category=recent")).json()).forEach(async ({username})=>{ // For each recent shape,
-		data[username] = await JSON.parse(JSON.stringify(await export_data(username))); // Export data.
+		data[username] = JSON.parse(JSON.stringify(await export_data(username))); // Export data.
 	});
 	return data;
 }
