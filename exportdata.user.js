@@ -43,7 +43,7 @@
 		return data;
 	}
 	var a = document.createElement('a');
-	a.href = URL.createObjectURL(new Blob([JSON.stringify(export_all_data())], { type: 'application/json' }));
+	a.href = URL.createObjectURL(new Blob([JSON.stringify(await export_all_data())], { type: 'application/json' }));
 	a.download = 'mydata.json';
 	a.style.display = 'none';
 	document.body.appendChild(a);
