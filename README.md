@@ -11,4 +11,4 @@ Recent Shapes: Public Settings, Last 2048 user memories, User-Specific Settings 
 Your Shapes: Settings, Last 2048 user memories, Knowledge, Training, User-Specific Settings as `recent` \
 \
 User Information as `user` \
-User Authentication Information as `info` \
+User Authentication Information as `info`
